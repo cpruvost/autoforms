@@ -14,7 +14,7 @@ Run terraform plan and terraform apply to create the infrastructure :
 
 <ul>
 <li> VCN will be created (same result as the wizard in the oci cloud console</li>
-<li> Database Cloud Service will be created in the private network</li>
+<li> Database Cloud Service will be created in the private subnet</li>
 <li> Forms UC VM (the last WebLogic Suite UC Image with Forms 12.2.1.19) will be created in the private subnet</li>
 <li> Load Balancer Cloud Service will be create in the public subnet</li>
 </ul>
