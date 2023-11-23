@@ -134,5 +134,5 @@ ex :
 export ORACLE_HOME=/u01/oracle/middleware/Oracle_Home
 export PATH=$ORACLE_HOME/bin:$PATH
 export TNS_ADMIN=/u01/oracle/middleware/user_projects/domains/base_domain/config/fmwconfig
-export ORACLE_SID=aTFdbVm
+export ORACLE_SID=yourSID
 - Do a test before with sqlplus that is in /u01/oracle/middleware/Oracle_Home/bin
