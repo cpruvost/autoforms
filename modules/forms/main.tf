@@ -88,7 +88,9 @@ resource "oci_core_instance" "generated_oci_core_instance" {
 		ocpus = "2"
 	}
 	source_details {
-		source_id = "ocid1.image.oc1..aaaaaaaa5rcfxi6dy5xnlvp5gstu45ba66tgyptbn2cqg7j3kjou2c5fls5q"
+		#old image
+		#source_id = "ocid1.image.oc1..aaaaaaaa5rcfxi6dy5xnlvp5gstu45ba66tgyptbn2cqg7j3kjou2c5fls5q"
+		source_id = "ocid1.image.oc1..aaaaaaaasg5qjc3z4beeyfa6wllsldtef6drwmlekjz67a4apnh5r3la2mga"
 		source_type = "image"
 	}
 	depends_on = [
@@ -96,17 +98,32 @@ resource "oci_core_instance" "generated_oci_core_instance" {
 	]
 }
 
+# Agreement for old image
+# resource "oci_core_app_catalog_subscription" "generated_oci_core_app_catalog_subscription" {
+# 	compartment_id = var.compartment_ocid
+# 	eula_link = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.eula_link}"
+# 	listing_id = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.listing_id}"
+# 	listing_resource_version = "12.2.1.19_230317"
+# 	oracle_terms_of_use_link = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.oracle_terms_of_use_link}"
+# 	signature = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.signature}"
+# 	time_retrieved = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.time_retrieved}"
+# }
+
+# resource "oci_core_app_catalog_listing_resource_version_agreement" "generated_oci_core_app_catalog_listing_resource_version_agreement" {
+# 	listing_id = "ocid1.appcataloglisting.oc1..aaaaaaaaui7smknjjwxcjrroz4r63px66rwjohoi5hsngzv2rxzfueztk3mq"
+# 	listing_resource_version = "12.2.1.19_230317"
+# }
 resource "oci_core_app_catalog_subscription" "generated_oci_core_app_catalog_subscription" {
-	compartment_id = var.compartment_ocid
+	compartment_id = "ocid1.compartment.oc1..aaaaaaaax6vcsmyeticnpfvvixqk5lyqgihqbjvhcxfakuruoyv4dr4utq7q"
 	eula_link = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.eula_link}"
 	listing_id = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.listing_id}"
-	listing_resource_version = "12.2.1.19_230317"
+	listing_resource_version = "23.3.1-ol7.9-Forms-12.2.1.19_230725"
 	oracle_terms_of_use_link = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.oracle_terms_of_use_link}"
 	signature = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.signature}"
 	time_retrieved = "${oci_core_app_catalog_listing_resource_version_agreement.generated_oci_core_app_catalog_listing_resource_version_agreement.time_retrieved}"
 }
 
 resource "oci_core_app_catalog_listing_resource_version_agreement" "generated_oci_core_app_catalog_listing_resource_version_agreement" {
-	listing_id = "ocid1.appcataloglisting.oc1..aaaaaaaaui7smknjjwxcjrroz4r63px66rwjohoi5hsngzv2rxzfueztk3mq"
-	listing_resource_version = "12.2.1.19_230317"
+	listing_id = "ocid1.appcataloglisting.oc1..aaaaaaaaq2vkow7zwkxg6ky4zxsnckdlfgtgmg7i4kkyev3y6zyo72mpkgza"
+	listing_resource_version = "23.3.1-ol7.9-Forms-12.2.1.19_230725"
 }

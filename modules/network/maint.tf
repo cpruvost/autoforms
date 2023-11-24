@@ -224,6 +224,48 @@ resource oci_core_security_list export_security-list-for-private-subnet-DemoVCN 
     source_type = "CIDR_BLOCK"
     stateless   = "false"
     tcp_options {
+      max = "8080"
+      min = "8080"
+      #source_port_range = <<Optional value not found in discovery>>
+    }
+    #udp_options = <<Optional value not found in discovery>>
+  }
+  ingress_security_rules {
+    #description = <<Optional value not found in discovery>>
+    #icmp_options = <<Optional value not found in discovery>>
+    protocol    = "6"
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    stateless   = "false"
+    tcp_options {
+      max = "80"
+      min = "80"
+      #source_port_range = <<Optional value not found in discovery>>
+    }
+    #udp_options = <<Optional value not found in discovery>>
+  }
+  ingress_security_rules {
+    #description = <<Optional value not found in discovery>>
+    #icmp_options = <<Optional value not found in discovery>>
+    protocol    = "6"
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    stateless   = "false"
+    tcp_options {
+      max = "8000"
+      min = "8000"
+      #source_port_range = <<Optional value not found in discovery>>
+    }
+    #udp_options = <<Optional value not found in discovery>>
+  }
+  ingress_security_rules {
+    #description = <<Optional value not found in discovery>>
+    #icmp_options = <<Optional value not found in discovery>>
+    protocol    = "6"
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    stateless   = "false"
+    tcp_options {
       max = "5901"
       min = "5901"
       #source_port_range = <<Optional value not found in discovery>>
@@ -340,6 +382,48 @@ resource oci_core_default_security_list export_Default-Security-List-for-DemoVCN
     tcp_options {
       max = "9002"
       min = "9002"
+      #source_port_range = <<Optional value not found in discovery>>
+    }
+    #udp_options = <<Optional value not found in discovery>>
+  }
+  ingress_security_rules {
+    #description = <<Optional value not found in discovery>>
+    #icmp_options = <<Optional value not found in discovery>>
+    protocol    = "6"
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    stateless   = "false"
+    tcp_options {
+      max = "8080"
+      min = "8080"
+      #source_port_range = <<Optional value not found in discovery>>
+    }
+    #udp_options = <<Optional value not found in discovery>>
+  }
+  ingress_security_rules {
+    #description = <<Optional value not found in discovery>>
+    #icmp_options = <<Optional value not found in discovery>>
+    protocol    = "6"
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    stateless   = "false"
+    tcp_options {
+      max = "80"
+      min = "80"
+      #source_port_range = <<Optional value not found in discovery>>
+    }
+    #udp_options = <<Optional value not found in discovery>>
+  }
+  ingress_security_rules {
+    #description = <<Optional value not found in discovery>>
+    #icmp_options = <<Optional value not found in discovery>>
+    protocol    = "6"
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    stateless   = "false"
+    tcp_options {
+      max = "8000"
+      min = "8000"
       #source_port_range = <<Optional value not found in discovery>>
     }
     #udp_options = <<Optional value not found in discovery>>

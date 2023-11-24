@@ -39,15 +39,15 @@ variable "compartment_ocid" {
     type        = string
 }
 
-variable "private_subnet_ocid" {
-    description = "The OCI Private Subnet ocid"
-    type        = string
-}
+# variable "private_subnet_ocid" {
+#     description = "The OCI Private Subnet ocid"
+#     type        = string
+# }
 
-variable "public_subnet_ocid" {
-    description = "The OCI Public Subnet ocid"
-    type        = string
-}
+# variable "public_subnet_ocid" {
+#     description = "The OCI Public Subnet ocid"
+#     type        = string
+# }
 
 # Use data to get ADs is better.
 # variable "availability_domain" {

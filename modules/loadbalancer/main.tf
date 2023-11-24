@@ -133,7 +133,7 @@ resource "oci_load_balancer_listener" "lb-listener1" {
   protocol                 = "HTTP"
 
   connection_configuration {
-    idle_timeout_in_seconds = "2"
+    idle_timeout_in_seconds = "30"
   }
 }
 
@@ -170,6 +170,6 @@ resource "oci_load_balancer_listener" "lb-listener2" {
   protocol                 = "HTTP"
 
   connection_configuration {
-    idle_timeout_in_seconds = "2"
+    idle_timeout_in_seconds = "30"
   }
 }

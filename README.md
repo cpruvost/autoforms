@@ -125,14 +125,3 @@ Launch Fsal on your laptop :  java -jar frmsal.jar -url "http://ip-load-balancer
 You can go to LiveLabs to have more details. This tuto does not use Terraform but is full of information about Forms VM !!!
 <a href="https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3168&clear=RR,180&session=5288951176359" target="_blank">Follow the LiveLabs "Migrate Oracle Forms To OCI"</a>
 
-## Note 2 : using Forms Builder in the VM (if you have problems to connect to DBCS)
-
-- Check the connection to your dbcs in the tnsnames.ora in /u01/oracle/middleware/user_projects/domains/base_domain/config/fmwconfig
-- Add a file sqlnet.ora in /u01/oracle/middleware/user_projects/domains/base_domain/config/fmwconfig that contains the line : NAMES.DIRECTORY_PATH=(TNSNAMES,HOSTNAME)
-- Add all the good env variables in your ~/.bashrc
-ex : 
-export ORACLE_HOME=/u01/oracle/middleware/Oracle_Home
-export PATH=$ORACLE_HOME/bin:$PATH
-export TNS_ADMIN=/u01/oracle/middleware/user_projects/domains/base_domain/config/fmwconfig
-export ORACLE_SID=yourSID
-- Do a test before with sqlplus that is in /u01/oracle/middleware/Oracle_Home/bin
